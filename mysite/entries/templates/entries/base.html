@@ -36,13 +36,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="{% url 'blog_home'%}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="{% url 'create_entry'%}">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="{%url 'logout'%}">Contact</a>
           </li>
         </ul>
       </div>
@@ -62,13 +62,15 @@
 
         <!-- Search Widget -->
         <div class="card my-4">
-          <h5 class="card-header">Search</h5>
+          <h5 class="card-header">log imformation</h5>
           <div class="card-body">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for...">
-              <span class="input-group-btn">
-                <button class="btn btn-secondary" type="button">Go!</button>
-              </span>
+            <div class="list-unstyled mb-8">
+                <li>
+                  <p><strong>user name: </strong>{{user.username}}</p>
+                </li>
+                <li>
+                  <p><strong>Email : </strong>{{user.email}}</p>
+                </li>
             </div>
           </div>
         </div>

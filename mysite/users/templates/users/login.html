@@ -1,0 +1,26 @@
+{% extends "entries/base.html" %}   
+    {% block content %}
+     <!-- Blog Entries Column -->
+      <div class="col-md-8">
+        <a href="{% url 'blog_home'%}">Back To home</a><!-- Dư -->
+        <h1 class="my-4">Page Heading
+          <small>Secondary Text</small>
+        </h1>
+
+        <!-- Blog Post -->
+        <div class="card mb-4 mt-4">
+          <div class="card-header">
+          <h3 style="color: red;">login your Account</h3>
+          </div>
+          <div class="card-body">
+            <form method= "POST">
+               {% csrf_token %} 
+               {{form.as_p}}
+               <button type="submit" class="btn btn-primary">login</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+      </div>
+    {% endblock %}  
