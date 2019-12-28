@@ -3,13 +3,13 @@
      <!-- Blog Entries Column -->
       <div class="col-md-8">
 
-        <h1 class="my-4">Page Heading
-          <small>Secondary Text</small>
+        <h1 class="my-5">News feed
+          <small>Your news today</small>
         </h1>
        {% for entry  in blog_entries%}
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+       
           <div class="card-body">
             <h3 class="card-title">{{entry.entry_title}}</h3>
             <p class="card-text">{{entry.entry_text|truncatechars:100}}</p>

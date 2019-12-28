@@ -2,21 +2,19 @@
     {% block content %}
      <!-- Blog Entries Column -->
       <div class="col-md-8">
-        <a href="{% url 'blog_home'%}">Back To home</a><!-- Dư -->
-        <h1 class="my-4">Page Heading
-          <small>Secondary Text</small>
-        </h1>
-
         <!-- Blog Post -->
         <div class="card mb-4 mt-4">
           <div class="card-header">
-          <h3 style="color: red;">login your Account</h3>
+          <h3 style="color: red;">Login your Account</h3>
           </div>
           <div class="card-body">
             <form method= "POST">
                {% csrf_token %} 
                {{form.as_p}}
-               <button type="submit" class="btn btn-primary">login</button>
+               <button type="submit" class="btn btn-danger">Login Now</button>
+               <div>         
+                  Forget your password? <a href="{% url 'register'%}" class="link link-info" role="button">Link Button</a>
+               </div>
             </form>
           </div>
         </div>
